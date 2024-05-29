@@ -1,11 +1,12 @@
-import 'Form.css'
 
-function OrderForm() {
+
+// eslint-disable-next-line react/prop-types
+function OrderForm({ onSubmit }) {
 
     return (
 
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={onSubmit}>
 
             Voornaam <input type="text"/>
             Achternaam <input type="text"/>
@@ -33,4 +34,4 @@ function OrderForm() {
 
 }
 
-export default OrderForm()
+export default OrderForm;
