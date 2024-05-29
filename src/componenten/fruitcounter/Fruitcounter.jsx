@@ -1,12 +1,15 @@
 import './Fruitcounter.css'
 
-function Fruitcounter(props) {
-
-    <section>
-<h2>{props.title}</h2>
-    </section>
-
-
+// eslint-disable-next-line react/prop-types
+function Fruitcounter({ title, counter, increase, decrease }) {
+    return (
+        <section>
+            <h2>{title}</h2>
+            <button type="button" onClick={decrease}>-</button>
+            <p>{counter}</p>
+            <button type="button" onClick={increase}>+</button>
+        </section>
+    );
 }
 
 export default Fruitcounter;

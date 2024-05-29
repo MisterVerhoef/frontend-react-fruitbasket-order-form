@@ -1,5 +1,6 @@
 import {useState} from "react";
 import './App.css'
+import Fruitcounter from "./componenten/fruitcounter/Fruitcounter.jsx";
 
 
 function App() {
@@ -54,31 +55,35 @@ function App() {
                 <h1>Fruitmand bezorgservice</h1>
             </header>
             <main>
-                <section>
-                    <h2>Aardbeien</h2>
-                    <button type="button" onClick={decreaseStrawberry}>-</button>
-                    <p>{strawberryCounter}</p>
-                    <button type="button" onClick={increaseStrawberry}>+</button>
-                </section>
-                <section>
-                    <h2>Bananen</h2>
-                    <button type="button" onClick={decreaseBanana}>-</button>
-                    <p>{bananaCounter}</p>
-                    <button type="button" onClick={increaseBanana}>+</button>
-                </section>
-                <section>
-                    <h2>Appels</h2>
-                    <button type="button" onClick={decreaseApple}>-</button>
-                    <p>{appleCounter}</p>
-                    <button type="button" onClick={increaseApple}>+</button>
-                </section>
-                <section>
-                    <h2>Kiwi's</h2>
-                    <button type="button" onClick={decreaseKiwi}>-</button>
-                    <p>{kiwiCounter}</p>
-                    <button type="button" onClick={increaseKiwi}>+</button>
-                </section>
-                <button type="button" onClick={fruitReset}>Reset</button>
+           <Fruitcounter
+               title="Aardbeien"
+               counter={strawberryCounter}
+               increase={increaseStrawberry}
+               decrease={decreaseStrawberry}
+           />
+
+                <Fruitcounter
+                    title="Appelen"
+                    counter={appleCounter}
+                    increase={increaseApple}
+                    decrease={decreaseApple}
+                />
+
+                <Fruitcounter
+                    title="Bananen"
+                    counter={bananaCounter}
+                    increase={increaseBanana}
+                    decrease={decreaseBanana}
+                />
+
+                <Fruitcounter
+                    title="Kiwi"
+                    counter={kiwiCounter}
+                    increase={increaseKiwi}
+                    decrease={decreaseKiwi}
+                    />
+
+                <button onClick={fruitReset}>Reset</button>
 
                 <form onSubmit={handleSubmit}>
 
