@@ -1,37 +1,51 @@
-
-
 // eslint-disable-next-line react/prop-types
 function OrderForm({ onSubmit }) {
-
     return (
-
-
-        <form onSubmit={onSubmit}>
-
-            Voornaam <input type="text"/>
-            Achternaam <input type="text"/>
-            Leeftijd <input type="number" min="18" max="120"/>
-            Postcode <input type="text" maxLength={6}/>
-
-            Bezorgfrequentie
-            <select name="bezorgfrequentie" id="bezorgfrequentie">
-                <option value="dagelijks">Dagelijks</option>
-                <option value="wekelijks">Iedere week</option>
-                <option value="maandelijks">Iedere maand</option>
-            </select>
-
-            <input type="radio" name="overdag" value="overdag"/> Overdag
-            <input type="radio" name="avond" value="avond"/> Avond
-
-            Opmerkingen
-            <textarea name="opmerkingen" id="" cols="30" rows="10"></textarea>
-
-            <input type="checkbox" name="userTerms" value="agreedToUserTerms"/> Ik ga akkoord met
-            de voorwaarden
-            <button type="submit">Verzend</button>
-        </form>
-    )
-
+        <div>
+            <form onSubmit={onSubmit}>
+                <label htmlFor="voornaam">
+                    Voornaam
+                    <input type="text" id="voornaam" name="voornaam" />
+                </label>
+                <label htmlFor="achternaam">
+                    Achternaam
+                    <input type="text" id="achternaam" name="achternaam" />
+                </label>
+                <label htmlFor="leeftijd">
+                    Leeftijd
+                    <input type="number" id="leeftijd" name="leeftijd" min="18" max="120" />
+                </label>
+                <label htmlFor="postcode">
+                    Postcode
+                    <input type="text" id="postcode" name="postcode" maxLength={6} />
+                </label>
+                <label htmlFor="bezorgfrequentie">
+                    Bezorgfrequentie
+                    <select name="bezorgfrequentie" id="bezorgfrequentie">
+                        <option value="dagelijks">Dagelijks</option>
+                        <option value="wekelijks">Iedere week</option>
+                        <option value="maandelijks">Iedere maand</option>
+                    </select>
+                </label>
+                <div>
+                    <label htmlFor="overdag">
+                        <input type="radio" id="overdag" name="tijd" value="overdag" /> Overdag
+                    </label>
+                    <label htmlFor="avond">
+                        <input type="radio" id="avond" name="tijd" value="avond" /> Avond
+                    </label>
+                </div>
+                <label htmlFor="opmerkingen">
+                    Opmerkingen
+                    <textarea id="opmerkingen" name="opmerkingen" cols="30" rows="10"></textarea>
+                </label>
+                <label htmlFor="userTerms">
+                    <input type="checkbox" id="userTerms" name="userTerms" value="agreedToUserTerms" /> Ik ga akkoord met de voorwaarden
+                </label>
+                <button type="submit">Verzend</button>
+            </form>
+        </div>
+    );
 }
 
 export default OrderForm;

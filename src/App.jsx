@@ -2,7 +2,8 @@ import {useState} from "react";
 import './App.css';
 import Fruitcounter from "./componenten/fruitcounter/Fruitcounter.jsx";
 import OrderForm from "./componenten/form/OrderForm.jsx";
-
+import companyLogo from "./assets/screenshot-logo.png";
+import HeaderFormat from "./componenten/headerFormat/HeaderFormat.jsx";
 
 function App() {
 
@@ -52,9 +53,9 @@ function App() {
     console.log(strawberryCounter)
     return (
         <>
-            <header>
-                <h1>Fruitmand bezorgservice</h1>
-            </header>
+           <HeaderFormat
+           companyLogo={companyLogo}
+           />
             <main>
            <Fruitcounter
                title="Aardbeien"
