@@ -4,6 +4,10 @@ import Fruitcounter from "./componenten/fruitcounter/Fruitcounter.jsx";
 import OrderForm from "./componenten/form/OrderForm.jsx";
 import companyLogo from "./assets/screenshot-logo.png";
 import HeaderFormat from "./componenten/headerFormat/HeaderFormat.jsx";
+import strawberry from "./assets/strawberry-image.png";
+import banana from "./assets/banana-image.png";
+import kiwi from "./assets/kiwi-image.png";
+import apple from "./assets/apple-image.png";
 
 function App() {
 
@@ -58,6 +62,7 @@ function App() {
            />
             <main>
            <Fruitcounter
+               img={strawberry}
                title="Aardbeien"
                counter={strawberryCounter}
                increase={increaseStrawberry}
@@ -66,6 +71,7 @@ function App() {
 
                 <Fruitcounter
                     title="Appelen"
+                    img={apple}
                     counter={appleCounter}
                     increase={increaseApple}
                     decrease={decreaseApple}
@@ -73,6 +79,7 @@ function App() {
 
                 <Fruitcounter
                     title="Bananen"
+                    img={banana}
                     counter={bananaCounter}
                     increase={increaseBanana}
                     decrease={decreaseBanana}
@@ -80,19 +87,22 @@ function App() {
 
                 <Fruitcounter
                     title="Kiwi"
+                    img={kiwi}
                     counter={kiwiCounter}
                     increase={increaseKiwi}
                     decrease={decreaseKiwi}
                     />
 
-                <button onClick={fruitReset}>Reset</button>
+                <button  id="counter-reset-button" onClick={fruitReset}>Reset</button>
 
-              <OrderForm
-              onSubmit={handleSubmit}
-              />
 
 
             </main>
+            <footer>
+                <OrderForm
+                    onSubmit={handleSubmit}
+                />
+            </footer>
         </>
     )
 }

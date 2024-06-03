@@ -6,7 +6,6 @@ function HeaderFormat({companyLogo}) {
 
     <header>
         <span><img src={companyLogo} alt="Logo"/></span>
-        <h1>Fruitmand bezorgservice</h1>
     </header>
 )
 

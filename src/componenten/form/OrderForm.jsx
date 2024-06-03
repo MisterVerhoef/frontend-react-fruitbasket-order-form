@@ -1,8 +1,10 @@
+import './OrderForm.css'
+
 // eslint-disable-next-line react/prop-types
 function OrderForm({ onSubmit }) {
     return (
-        <div>
-            <form onSubmit={onSubmit}>
+        <div className="form-container">
+            <form onSubmit={onSubmit} >
                 <label htmlFor="voornaam">
                     Voornaam
                     <input type="text" id="voornaam" name="voornaam" />
@@ -28,7 +30,7 @@ function OrderForm({ onSubmit }) {
                     </select>
                 </label>
                 <div>
-                    <label htmlFor="overdag">
+                    <label htmlFor="overdag ">
                         <input type="radio" id="overdag" name="tijd" value="overdag" /> Overdag
                     </label>
                     <label htmlFor="avond">
@@ -36,7 +38,7 @@ function OrderForm({ onSubmit }) {
                     </label>
                 </div>
                 <label htmlFor="opmerkingen">
-                    Opmerkingen
+                    <p>Opmerkingen</p>
                     <textarea id="opmerkingen" name="opmerkingen" cols="30" rows="10"></textarea>
                 </label>
                 <label htmlFor="userTerms">
