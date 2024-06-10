@@ -8,7 +8,7 @@ function Fruitcounter({ img,title, counter, increase, decrease }) {
             <img src={img} alt={title} />
                 </span>
             <h2>{title}</h2>
-            <button type="button" onClick={decrease}>-</button>
+            <button type="button" onClick={decrease} disabled={counter === 0}>-</button>
             <p>{counter}</p>
             <button type="button" onClick={increase}>+</button>
         </article>
